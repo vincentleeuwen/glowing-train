@@ -4,11 +4,13 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
+const router = require('./router');
 
 // App setup
 // Middleware that any request will go through
 app.use(morgan('combined')); // logging framework
 app.use(bodyParser.json({ type: '*/*' })); // parse any request as json
+router(app);
 
 // Server Setup
 const port = process.env.PORT || 3090;
