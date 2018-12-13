@@ -3,3 +3,4 @@ module.exports = (app) => {
     res.send(['foo', 'bar', 'dumdum']);
   });
 }
+
